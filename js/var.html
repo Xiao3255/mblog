@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关于带var和不带var声明变量 | TimeLine</title>
+    <meta name="description" content="记录我的前端学习点滴">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/mblog/assets/css/0.styles.c6272ac7.css" as="style"><link rel="preload" href="/mblog/assets/js/app.b34711a8.js" as="script"><link rel="preload" href="/mblog/assets/js/2.1254f33f.js" as="script"><link rel="preload" href="/mblog/assets/js/21.4d432eb3.js" as="script"><link rel="prefetch" href="/mblog/assets/js/10.5d5957c8.js"><link rel="prefetch" href="/mblog/assets/js/11.4194f877.js"><link rel="prefetch" href="/mblog/assets/js/12.f3819994.js"><link rel="prefetch" href="/mblog/assets/js/13.3b3fceb3.js"><link rel="prefetch" href="/mblog/assets/js/14.1f383059.js"><link rel="prefetch" href="/mblog/assets/js/15.4d559c4b.js"><link rel="prefetch" href="/mblog/assets/js/16.e45fcdbd.js"><link rel="prefetch" href="/mblog/assets/js/17.c8e38934.js"><link rel="prefetch" href="/mblog/assets/js/18.fe8b93a5.js"><link rel="prefetch" href="/mblog/assets/js/19.0971f681.js"><link rel="prefetch" href="/mblog/assets/js/20.90de0776.js"><link rel="prefetch" href="/mblog/assets/js/22.f1a67874.js"><link rel="prefetch" href="/mblog/assets/js/23.d8ef03c4.js"><link rel="prefetch" href="/mblog/assets/js/24.407ee46f.js"><link rel="prefetch" href="/mblog/assets/js/25.1febc119.js"><link rel="prefetch" href="/mblog/assets/js/26.c5c74c02.js"><link rel="prefetch" href="/mblog/assets/js/27.7fa9686b.js"><link rel="prefetch" href="/mblog/assets/js/28.e3ea476f.js"><link rel="prefetch" href="/mblog/assets/js/29.ce04160a.js"><link rel="prefetch" href="/mblog/assets/js/3.14617ffe.js"><link rel="prefetch" href="/mblog/assets/js/30.b61f8116.js"><link rel="prefetch" href="/mblog/assets/js/31.87e03a7c.js"><link rel="prefetch" href="/mblog/assets/js/4.4f648c2b.js"><link rel="prefetch" href="/mblog/assets/js/5.3126dc46.js"><link rel="prefetch" href="/mblog/assets/js/6.f7b5ac92.js"><link rel="prefetch" href="/mblog/assets/js/7.2299856a.js"><link rel="prefetch" href="/mblog/assets/js/8.3b6fc075.js"><link rel="prefetch" href="/mblog/assets/js/9.cc8a5821.js">
+    <link rel="stylesheet" href="/mblog/assets/css/0.styles.c6272ac7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mblog/" class="home-link router-link-active"><!----> <span class="site-name">TimeLine</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/html/semantic/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/mblog/js/closures/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/mblog/css/cssskill/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/mblog/node/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Framework
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/vue/lifecycle/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/mblog/flutter/basic.html" class="nav-link">
+  Flutter
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Network
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/network/http/" class="nav-link">
+  HTTP
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Plan
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/plan/note/" class="nav-link">
+  note
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mblog/textbook/parsehttp/" class="nav-link">
+  图解HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/mblog/textbook/computerNetworks/" class="nav-link">
+  计算机网络教程
+</a></li><li class="dropdown-item"><!----> <a href="/mblog/textbook/compute/" class="nav-link">
+  计算的本质
+</a></li><li class="dropdown-item"><!----> <a href="/mblog/textbook/advance/" class="nav-link">
+  JS高级程序设计
+</a></li></ul></div></div><div class="nav-item"><a href="/mblog/echo/echo/" class="nav-link">
+  环境安装
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/html/semantic/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/mblog/js/closures/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/mblog/css/cssskill/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/mblog/node/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Framework
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/vue/lifecycle/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/mblog/flutter/basic.html" class="nav-link">
+  Flutter
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Network
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/network/http/" class="nav-link">
+  HTTP
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Plan
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mblog/plan/note/" class="nav-link">
+  note
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mblog/textbook/parsehttp/" class="nav-link">
+  图解HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/mblog/textbook/computerNetworks/" class="nav-link">
+  计算机网络教程
+</a></li><li class="dropdown-item"><!----> <a href="/mblog/textbook/compute/" class="nav-link">
+  计算的本质
+</a></li><li class="dropdown-item"><!----> <a href="/mblog/textbook/advance/" class="nav-link">
+  JS高级程序设计
+</a></li></ul></div></div><div class="nav-item"><a href="/mblog/echo/echo/" class="nav-link">
+  环境安装
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>关于带var和不带var声明变量</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="关于带var和不带var声明变量"><a href="#关于带var和不带var声明变量" class="header-anchor">#</a> 关于带var和不带var声明变量</h1> <p>很多时候我们会发现，使用一个变量即使不带<code>var</code>关键字声明，也并不会报错，如</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//输出1</span>
+
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//输出1</span>
+</code></pre></div><p>当执行这两者时二者都会同时输出1，这使的我们觉得这二者并没有什么不同，但一些书籍则会说明这两者并非完全相同。那到底不同在哪？</p> <div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><p>上述结果将会直接报错，事实上当我们声明<code>x=0</code>时，我们是将其声明为<em>global object</em>的属性，在<code>BOM</code>中可以通过<code>window</code>来访问，而当处在<em>globalContext</em>时，<strong>global === globalContext(VO)</strong>，所以也就是说这两者并不是一样的。</p> <p>再回到上面的例子中，在进入<em>globalContext</em>时，其属性（property）<strong>VO</strong>中，只有<code>y</code>存在，且为<code>undefined</code>。而在代码执行阶段，<code>console.log(x)</code>并没能找到变量<code>x</code>，所以将会报错，程序中断。</p> <p>所以如果此时我们希望能够不报错，我们可以这样改</p> <div class="language-js extra-class"><pre class="language-js"><code>x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><p>此时程序将会输出<code>0</code>以及<code>undefined</code>，因为在代码执行阶段，<em>global</em>的属性（property）<code>x</code>将被创建，并赋值为<code>0</code>，所以<code>x</code>能够被找到，程序正常打印，而由于代码执行阶段，打印<code>y</code>在给<code>y</code>赋值之前，所以将会打印<code>undefined</code>。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mblog/assets/js/app.b34711a8.js" defer></script><script src="/mblog/assets/js/2.1254f33f.js" defer></script><script src="/mblog/assets/js/21.4d432eb3.js" defer></script>
+  </body>
+</html>
